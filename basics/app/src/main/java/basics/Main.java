@@ -7,12 +7,14 @@ package basics;
 
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
 
     public static void main(String[] args) {
         // System.out.println(pluralize("rrrr", 3));
-        flipNHeads(2);
+        // flipNHeads(2);
+        clock();
 
 
     }
@@ -25,18 +27,18 @@ public class Main {
         return word;
     }
 
-    public static void flipNHeads(int n){
+    public static void flipNHeads(int n) {
         int headsCounter = 0;
         int totalCounter = 0;
 
-        while (n != headsCounter){
+        while (n != headsCounter) {
             double randomNum = Math.random();
-            if (randomNum > .5){
+            if (randomNum > .5) {
                 headsCounter++;
                 System.out.println("heads");
 
             } else {
-                headsCounter =0;
+                headsCounter = 0;
                 totalCounter++;
                 System.out.println("tails");
 
@@ -48,11 +50,23 @@ public class Main {
 
     }
 
-    public static void clock(){
+    public static void clock() {
         LocalDateTime now = LocalDateTime.now();
+
+        while (true) {
+
+            if (LocalDateTime.now().getSecond() != now.getSecond()) {
+                LocalDateTime current = LocalDateTime.now();
+                String time = current.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+
+                System.out.println(time);
+                now = LocalDateTime.now();
+
+            }
+
+
+        }
 
 
     }
-
-
 }
