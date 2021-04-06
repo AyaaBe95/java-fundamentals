@@ -3,12 +3,53 @@
  */
 package linter;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        Path path = Paths.get("resources/gates.js");
+
+
+        BufferedReader reader = null;
+
+
+        try {
+            reader = Files.newBufferedReader(path);
+            String line = reader.readLine();
+
+            while (line != null) {
+                System.out.println("- " + line);
+                line = reader.readLine();
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    System.out.println("an error occurred while closing the file");
+                }
+            }
+        }
+
+
+
     }
-}
+
+//    public static String linter(String path) {
+//
+//
+//
+//
+//    }
+
+
+    }
