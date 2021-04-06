@@ -12,9 +12,9 @@ import java.time.format.DateTimeFormatter;
 public class Main {
 
     public static void main(String[] args) {
-        // System.out.println(pluralize("rrrr", 3));
-        // flipNHeads(2);
-        clock();
+//         System.out.println(pluralize("rrrr", 3));
+         flipNHeads(2);
+//        clock();
 
 
     }
@@ -22,9 +22,9 @@ public class Main {
     public static String pluralize(String word, int num) {
 
         if (num == 0 || num > 1) {
-            return word + "s";
+            return "I own " + num + " " + word + "s.";
         }
-        return word;
+        return "I own " + num + " " + word + ".";
     }
 
     public static void flipNHeads(int n) {
@@ -39,10 +39,11 @@ public class Main {
 
             } else {
                 headsCounter = 0;
-                totalCounter++;
                 System.out.println("tails");
 
             }
+            totalCounter++;
+
 
         }
 
