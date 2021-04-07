@@ -13,8 +13,15 @@ public class App {
 
 
     public static void main(String[] args) {
+        Path path = Paths.get("./app/src/main/resources/gates.js");
 
-        Path path = Paths.get("resources/gates.js");
+        System.out.print(linter(path));
+    }
+
+    public static String linter(Path path) {
+
+
+        String result="";
 
 
         BufferedReader reader = null;
@@ -23,10 +30,17 @@ public class App {
         try {
             reader = Files.newBufferedReader(path);
             String line = reader.readLine();
+            int number=1;
 
             while (line != null) {
-                System.out.println("- " + line);
-                line = reader.readLine();
+                if(line.endsWith(";") || line.isEmpty() || line.endsWith("{") || line.endsWith("}") || line.contains("if") || line.contains("else") ){
+                }
+                else {
+                    result = result +"Line "+number+ " Missing semicolon."+"\n";
+
+                }
+                    number++;
+                    line = reader.readLine();
             }
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -38,18 +52,14 @@ public class App {
                     System.out.println("an error occurred while closing the file");
                 }
             }
+
+            return result;
         }
 
 
 
-    }
 
-//    public static String linter(String path) {
-//
-//
-//
-//
-//    }
+    }
 
 
     }
