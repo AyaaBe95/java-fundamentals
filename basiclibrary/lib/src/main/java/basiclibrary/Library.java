@@ -3,7 +3,7 @@
  */
 package basiclibrary;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Library {
     public boolean someLibraryMethod() {
@@ -11,19 +11,39 @@ public class Library {
     }
 
     public static void main(String[] args) {
-        //  int[] array = {1, 2, 2, 20};
-        //  calculateAverage(array);
-        //roll(4);
-        // System.out.print(containsDuplicates(array));
 
-//        int[][] array = {
-//                {66, 64, 58, 65, 71, 57, 60},
-//                {57, 65, 65, 70, 72, 65, 51},
-//                {55, 54, 60, 53, 59, 57, 61},
-//                {65, 56, 55, 52, 55, 62, 57}
-//        };
-//
-//        calculateAverageOfTwoArrays(array);
+        int []array1 = {1,2,3,1}
+
+          calculateAverage(array1);
+        roll(4);
+         System.out.print(containsDuplicates(array1));
+
+        int[][] array = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+
+        calculateAverageOfTwoArrays(array);
+
+        System.out.println(AnalyzingWeatherData(array));
+
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        String winner = tally(votes);
+        System.out.print(winner + " received the most votes!");
+
+
 
     }
 
@@ -86,9 +106,74 @@ public class Library {
         return lowest;
 
     }
+    public static String AnalyzingWeatherData (int[][] array) {
 
+        int lowest= array[0][0];
+        int highest =array[0][0];
+        String output="";
 
+        Set<Integer> tempData = new HashSet<>();
+        for (int i=0;i<array.length;i++){
+            for (int j=0;j<array[i].length;j++){
+                if (array[i][j]<lowest){
+                    lowest =array[i][j];
+                }
+                if (array[i][j]>highest){
+                    highest=array[i][j];
+                }
+                tempData.add(array[i][j]);
+            }
+        }
 
+        output+= String.format("High: %s\nLow: %s\n", highest, lowest);
+        for (int i=lowest;i<highest;i++){
+            if (!tempData.contains(i)){
+                output += String.format("Never saw temperature: %s\n", i);
+
+            }
+        }
+        return output;
 
 
     }
+
+    public static String tally(List<String> arr) {
+        HashMap<String, Integer> data = new HashMap();
+
+        String winner = "";
+        int winnerVotes = 0;
+
+        for (int i=0;i<arr.size();i++){
+            data.put(arr.get(i),0);
+        }
+
+        for (int i=0;i<arr.size();i++){
+            data.put(arr.get(i),data.get(arr.get(i))+1);
+
+        }
+
+        for (String key: data.keySet())
+            if (data.get(key) > winnerVotes) {
+                winnerVotes = data.get(key);
+                winner = key + " received the most votes!";
+
+            }
+
+
+        return winner;
+
+
+    }
+
+
+    }
+
+
+
+
+
+
+
+
+
+

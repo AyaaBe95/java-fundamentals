@@ -12,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 public class Main {
 
     public static void main(String[] args) {
+
          System.out.println(pluralize("rrrr", 3));
          flipNHeads(2);
         clock();
