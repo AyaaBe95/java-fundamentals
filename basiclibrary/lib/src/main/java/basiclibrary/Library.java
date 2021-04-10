@@ -6,9 +6,7 @@ package basiclibrary;
 import java.util.*;
 
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
-    }
+
 
     public static void main(String[] args) {
         int[] array = {1, 2, 2, 20};
@@ -17,6 +15,8 @@ public class Library {
 
         calculateAverage(array);
 
+
+       
         int[][] array1 = {
                 {66, 64, 58, 65, 71, 57, 60},
                 {57, 65, 65, 70, 72, 65, 51},
@@ -25,6 +25,7 @@ public class Library {
         };
 
         calculateAverageOfTwoArrays(array1);
+
 
 
 
@@ -98,4 +99,14 @@ public class Library {
 
 
 
-}
+    }
+
+
+
+
+
+
+
+
+
+

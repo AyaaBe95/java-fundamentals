@@ -4,13 +4,14 @@
 package basiclibrary;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
-    }
+    
 
     @Test public void testrollMethod(){
         int array[] = Library.roll(4);
@@ -42,4 +43,11 @@ public class LibraryTest {
         float average = Library.calculateAverageOfTwoArrays(array);
         assertEquals(1.0, average, 1.0);
     }
+
+
+
+
+
 }
+
+
