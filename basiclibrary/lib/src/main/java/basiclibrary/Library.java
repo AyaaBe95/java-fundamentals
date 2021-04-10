@@ -3,7 +3,7 @@
  */
 package basiclibrary;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Library {
     public boolean someLibraryMethod() {
@@ -11,10 +11,11 @@ public class Library {
     }
 
     public static void main(String[] args) {
-          int[] array = {1, 2, 2, 20};
-          calculateAverage(array);
+        int[] array = {1, 2, 2, 20};
         roll(4);
         System.out.println(containsDuplicates(array));
+
+        calculateAverage(array);
 
         int[][] array1 = {
                 {66, 64, 58, 65, 71, 57, 60},
@@ -24,6 +25,11 @@ public class Library {
         };
 
         calculateAverageOfTwoArrays(array1);
+
+
+       
+
+
 
     }
 
@@ -92,6 +98,4 @@ public class Library {
 
 
 
-
-
-    }
+}
