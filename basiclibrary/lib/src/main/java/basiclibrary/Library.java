@@ -11,41 +11,44 @@ public class Library {
     }
 
     public static void main(String[] args) {
-        //  int[] array = {1, 2, 2, 20};
+          int[] array = {1, 2, 2, 20};
         //  calculateAverage(array);
-        //roll(4);
-        // System.out.print(containsDuplicates(array));
+        roll(4);
+        System.out.println(containsDuplicates(array));
 
-//        int[][] array = {
-//                {66, 64, 58, 65, 71, 57, 60},
-//                {57, 65, 65, 70, 72, 65, 51},
-//                {55, 54, 60, 53, 59, 57, 61},
-//                {65, 56, 55, 52, 55, 62, 57}
-//        };
-//
-//        calculateAverageOfTwoArrays(array);
+        int[][] array1 = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+
+        calculateAverageOfTwoArrays(array1);
 
     }
 
     public static int[] roll(int num) {
         int[] array = new int[num];
         for (int i = 0; i < num; i ++){
-            array[i] = (int) (Math.random() * 6);}
-        System.out.print((Arrays.toString(array)));
+            array[i] = (int) (Math.floor(Math.random()*(6-1+1)+1));}
+        System.out.println((Arrays.toString(array)));
 
 
         return array;
     }
 
     public static boolean  containsDuplicates (int[] array) {
+
         for (int i=0; i<array.length; i++){
             for (int j=i+1; j<array.length; j++){
                 if (array[i]==array[j]){
                     return true;
                 }
+
             }
         }
         return false;
+
 
 
     }

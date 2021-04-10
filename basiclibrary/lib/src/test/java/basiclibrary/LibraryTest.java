@@ -20,13 +20,13 @@ public class LibraryTest {
 
     @Test public void testcontainsDuplicatesFalseMethod(){
         int[] array = {1, 5, 2, 3};
-        assertFalse(false);
+        assertFalse("no duplicate",Library.containsDuplicates(array));
 
     }
 
     @Test public void testcontainsDuplicatesTrueMethod(){
         int[] array = {1, 2, 2, 3};
-        assertTrue(true);
+        assertTrue("duplicate",Library.containsDuplicates(array));
 
     }
 
