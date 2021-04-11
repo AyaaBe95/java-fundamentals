@@ -29,6 +29,16 @@
 
  - linter : It reads in js files via a PATH provided as a string. It reads each line on the file to see if the line is missing ';'. It skips the cases where the line is empty, 
      or the line ends with an opening curly brace, closing curly brace, or it contains if or else.
+     
+     
+ # Lab06:
+ * Inhirtance directory contains 2 classes:
+  - Reasturant class contains 3 methods :
+    - To string:to print reasurant details and reviwer details.
+    - AddReview:Add review details fromm review class.
+    - Average rating:calculate the average rating.
+  - Review class:
+    - contain constructor.
 
 
 
