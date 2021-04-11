@@ -2,8 +2,8 @@ package inheritance;
 
 public class Review {
 
-    public String author;
-    public int stars;
+    private String author;
+    private int stars;
 
     // constructor
 
@@ -13,12 +13,28 @@ public class Review {
     }
 
     public String toString(){
-        String msg= "Review{" +
-                "author='" + author + '\'' +
-                ", rating='" + stars + '\'' +
-                '}';
+       String msg= "Review{" +
+               "author='" + author + '\'' +
+               ", rating='" + stars + '\'' +
+               '}';
 
         System.out.print(msg);
         return msg;
+    }
+
+    public int getStars() {
+        return stars;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setStars(int stars) {
+        this.stars = stars;
     }
 }

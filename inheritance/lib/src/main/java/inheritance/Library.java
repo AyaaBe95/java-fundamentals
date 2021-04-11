@@ -8,9 +8,9 @@ public class Library {
     public static void main(String[] args) {
 
         Restaurant restaurant = new Restaurant("mmm",5,"$");
-        Review review = new Review("DDD",3);
-//        restaurant.toString();
-        review.toString();
+        restaurant.addReview("DDD",3);
+        restaurant.toString();
+        restaurant.averageReview();
 
     }
 }
