@@ -48,18 +48,21 @@ public class Theater {
 
         }
 
-    public void addReview(String author , int NewStars , String movieName){
+    public String addReview(String author , int NewStars , String movieName){
         moviesReview movieReview = new moviesReview( author, NewStars,movieName);
         String finalmsg="";
 //        for (int i =0; i<this.movies.size(); i++){
             if(this.movies.contains(movieName)==true){
-                 finalmsg += " the movie " + movieName + " has rate " + movieReview;
+                 finalmsg += " the movie " + movieName + " movie has rate " + movieReview;
             }
             else {
                 this.movies.add(movieName);
-                System.out.print("the movie has been added");
+                finalmsg += "The movie has been added!";
+
             }
 //        }
         System.out.println(finalmsg);
+        return finalmsg;
+
     }
 }

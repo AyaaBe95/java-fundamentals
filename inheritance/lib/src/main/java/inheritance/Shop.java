@@ -17,12 +17,7 @@ public class Shop {
         }
 
         public String toString() {
-            String msg= "Shop{" +
-                    "name='" + name + '\'' +
-                    ", description='" + description + '\'' +
-                    ", priceCategory='" + priceCategory + '\'' +
-                    reviews + '\'' +
-                    '}';
+            String msg= "Shop Name: " + name + " Description: "+ description + " Currency: " + priceCategory ;
 
             System.out.print(msg);
             return msg;

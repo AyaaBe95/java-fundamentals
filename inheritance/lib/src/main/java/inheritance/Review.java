@@ -19,10 +19,8 @@ public class Review {
     }
 
     public String toString(){
-       String msg= "Review{" +
-               "author='" + author + '\'' +
-               ", rating='" + stars + '\'' +
-               '}';
+       String msg=  "Review " + "Name: " + author + " Rating:" + stars ;
+       System.out.print(msg);
 
         return msg;
 

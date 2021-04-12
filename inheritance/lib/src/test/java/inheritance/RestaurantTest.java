@@ -17,9 +17,13 @@ public class RestaurantTest {
         }
     @Test
     public void restaurantToStringTest() {
-        Restaurant restaurantObject = new Restaurant("Irbid", 4, "$");
-        restaurantObject.addReview( "Rania", 3);
-        assertEquals("Restaurant{name='Irbid', rating=4, price_category='$',[Review{author='Rania', rating='3'}]}", restaurant.toString());
+        Restaurant restaurant = new Restaurant("Elul", 5, "JD");
+        restaurant.addReview("Aya", 4 );
+
+
+        String expected = "Restaurant Name: Elul Votes: 5 Currency: JD[ Review Name: Aya Rating: 4]" ;
+        System.out.println(restaurant.toString());
+        assertEquals(expected, restaurant.toString());
     }
 
     @Test

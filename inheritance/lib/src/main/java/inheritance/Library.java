@@ -10,11 +10,16 @@ public class Library {
     public static void main(String[] args) {
 
 
-        Restaurant restaurant = new Restaurant("aseel",5,"$");
-        restaurant.addReview("DDD",3);
+//        Restaurant restaurant = new Restaurant("aseel",5,"$");
+//        restaurant.addReview("DDD",3);
+        Review r = new Review("AAA",5);
+        Shop rr = new Shop("AAA","ggg","&");
 
 
-        restaurant.toString();
+        rr.toString();
+
+
+//        restaurant.toString();
 //
 //        Shop shop = new Shop("aya","ddd","$");
 //        shop.addReview("esraa",9);

@@ -22,12 +22,9 @@ public class Restaurant {
     //update toString (add Review)
 
     public String toString(){
-        String msg = "Restaurant: " +
-                "name='" + name + '\n' +
-                ", rating=" + starsRating +'\n'+
-                ", price_category='" + price_category + '\n' +
-                reviews  +
-                '}';
+        String msg  =  "Restaurant Name: " + name + " Votes: " + starsRating +
+                " Currency: " + price_category  + reviews;
+
         System.out.print(msg);
 
         return  msg;
