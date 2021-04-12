@@ -3,14 +3,42 @@
  */
 package inheritance;
 
+import java.util.ArrayList;
+
 public class Library {
 
     public static void main(String[] args) {
 
-        Restaurant restaurant = new Restaurant("mmm",5,"$");
+
+        Restaurant restaurant = new Restaurant("aseel",5,"$");
         restaurant.addReview("DDD",3);
+
+
         restaurant.toString();
-        restaurant.averageReview();
+//
+//        Shop shop = new Shop("aya","ddd","$");
+//        shop.addReview("esraa",9);
+//        shop.toString();
+
+//      restaurant.averageReview();
+//
+//        ArrayList<String> list = new ArrayList<>();
+//        list.add("a");
+//        list.add("b");
+//        Theater t = new Theater("C",list);
+//        t.toString();
+//        t.addMovie("aaaaaa");
+//        t.toString();
+//        t.removeMovie("b");
+//        t.toString();
+//
+////        t.addReview("asel",5,"a");
+//        t.addReview("asel",5,"c");
+//        t.addReview("asel",5,"c");
+
+
+
+
 
     }
 }
