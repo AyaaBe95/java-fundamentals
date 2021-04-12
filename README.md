@@ -40,6 +40,11 @@
   - Review class:
     - contain constructor.
 
+  # lab07:
+  - Shop class:contains toString and add review.
+  - Theater class: contains toString and add review.
+  - Theater Review:to review a specific movie
+
 
 
 
